@@ -1,0 +1,16 @@
+<div class="pt-3 pb-5">
+    {{ form_start(addressBookForm) }}
+    {{ form_row(addressBookForm.firstName, {'label': 'First Name'}) }}
+    {{ form_row(addressBookForm.lastName, {'label': 'Last Name'}) }}
+    {{ form_row(addressBookForm.street) }}
+    {{ form_row(addressBookForm.houseNo, {'label': 'House Number'}) }}
+    {{ form_row(addressBookForm.zip) }}
+    {{ form_row(addressBookForm.city) }}
+    {{ form_row(addressBookForm.country) }}
+    {{ form_row(addressBookForm.phone) }}
+    {{ form_row(addressBookForm.birthDate, {'label': 'Birth Date'}) }}
+    {{ form_row(addressBookForm.email) }}
+    {{ form_row(addressBookForm.picture) }}
+    <button type="submit" class="btn btn-primary" formnovalidate>Save</button>
+    {{ form_end(addressBookForm) }}
+</div>

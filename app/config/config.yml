@@ -7,6 +7,7 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
+    address_book_directory: '%kernel.project_dir%/web/uploads/addressbook'
 
 framework:
     #esi: ~
@@ -33,8 +34,11 @@ framework:
 
 # Twig Configuration
 twig:
-    debug: '%kernel.debug%'
-    strict_variables: '%kernel.debug%'
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+    number_format:
+        thousands_separator: ','
+    form_themes: ['bootstrap_4_layout.html.twig']
 
 # Doctrine Configuration
 doctrine:
@@ -42,12 +46,6 @@ doctrine:
         driver: pdo_sqlite
         path: '%kernel.project_dir%/app/sqlite.db'
         charset: UTF8
-        # if using pdo_sqlite as your database driver:
-        #   1. add the path in parameters.yml
-        #     e.g. database_path: '%kernel.project_dir%/var/data/data.sqlite'
-        #   2. Uncomment database_path in parameters.yml.dist
-        #   3. Uncomment next line:
-        #path: '%database_path%'
 
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'
