@@ -14,3 +14,10 @@ web_profiler:
 
 swiftmailer:
     disable_delivery: true
+
+liip_functional_test:
+    cache_sqlite_db: true
+
+doctrine:
+    dbal:
+        url: 'sqlite:///%kernel.project_dir%/var/data/test.sqlite'
